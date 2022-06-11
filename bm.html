@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="inner">
+            <h1 class="logo">
+                <a href="">                    
+                    <span class="blind">배달의 민족</span>
+                    <svg viewBox="0 0 115 32" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                        <path d="M115 3.847l-2.013-2.158H95.074v.957l-.986-1.013h-17.91v.97l-.94-.97h-4.772v.416l-.421-.416h-3.986V0h-4.777v1.633H57.33v1.97l-1.72-2.1h-4.776v.876l-.418-.64h-3.984V.107h-4.78v1.63l-3.954.002v1.39l-.937-1.473h-4.774v4.126l-.419-.67-3.314-3.451h-6.087L18.85 5.11v1.49l-.937-1.49-3.314-3.45H3.319L0 5.11v7.199l3.967 4.141H.002v4.985L1.79 23.03H6.57v6.304l2.79 1.935h3.73v-8.24h6.446v-4.339l.012.015 4.066 4.325h6.756l1.616-1.626v7.933l1.85 1.935h4.55v-1.938l1.869 1.938h18.008v-2.494l-1.913-2.938h2.478l5.183 5.432h10.129l3.115-3.423v-4.365l-3.407-3.474h3.407v-1.213l1.15 1.213h3.352l1.219-4.438.715 2.65 1.217 1.788h2.424v9.302l2.054 1.957h6.716v-2l1.92 2H115V27.5l-1.923-2.012H115v-7.6l-1.579-1.586H115v-2.799l-1.811-1.703H115V8.283l-1.331-1.288H115V3.847z" fill="#000"></path>
+                        <path d="M36.075 10.62V2.372h-3.402v26.243h3.402V14.17h1.231v-3.55h-1.231zM27.965 2.371h-5.512l-2.916 3.04v12.261l2.916 3.037h5.512l2.915-3.037V5.411l-2.915-3.04zm-.485 14.435v.358h-4.543V5.916h4.543v10.89zM41.783 25.074v-3.222h-3.397v6.77h16.536v-3.548H41.783zM45.74 2.46V.829h-3.398v1.633h-3.954v2.077H49.73V2.46h-3.992zM54.922 10.465v-8.25h-3.395V20.56h3.395v-6.546h1.32v-3.55h-1.32zM41.291 5.809L38.386 8.85v8.826l2.913 3.037h5.517l2.91-3.037V8.85l-2.91-3.042H41.29zm5.038 11.357h-4.546V9.358h4.546v7.808zM88.025 2.344v5.512h-1.5v3.545h1.5v17.185h2.12V2.344h-2.12zM93.398 2.344h-2.122v26.242h2.122V2.344z" fill="#fff"></path>
+                        <path d="M83.37 4.423h3.346v-2.08h-9.854v2.08h3.115l-3.526 13.075h2.684l2.539-9.408 2.54 9.408h2.684L83.37 4.423zM71.153 2.355v3.347h-.8v3.552h.8v2.273h-.8v3.547h.8V17.5h3.4V2.355h-3.4zM65.37 2.348V.723h-3.397v1.625h-3.957v2.08H69.36v-2.08H65.37zM71.644 18.906H62.43l-2.912 3.04v3.605l2.917 3.04h9.206l2.913-3.04v-3.605l-2.91-3.04zm-.492 6.138h-8.237V22.45h8.237v2.593zM66.445 5.703H60.93l-2.913 3.042v5.797l2.913 3.04h5.516l2.916-3.04V8.745l-2.916-3.042zm-.489 8.334h-4.54V9.248h4.54v4.789zM112.294 11.71H95.761v2.078h16.533v-2.077zM99.158 4.484h13.141V2.402H95.761v6.884h16.538V6.49H99.158V4.484zM108.902 20.9H95.761v7.606h16.538v-2.799H99.158v-2.724h13.141v-6.881H95.761v2.793h13.141V20.9zM.688 17.168v3.545h6.569v7.902h3.397v-7.902h6.57v-3.545H.688zM14.312 2.375H3.601L.687 5.415v6.599l2.913 3.042h10.71l2.913-3.04V5.414l-2.912-3.039zm-.485 9.128H4.088V5.917h9.74v5.586z" fill="#fff"></path>
+                    </svg>
+                </a>
+            </h1>
+
+            <nav class="nav-area">
+
+                <ul class="nav-wrap">
+                    <li class="nav-list"><a href="">회사소개</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">우아한 문화</a></li>
+                                <li class="sub-item"><a href="">히스토리</a></li>
+                                <li class="sub-item"><a href="">윤리경영</a></li>
+                                <li class="sub-item"><a href="">준법경영</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-list"><a href="">서비스</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">배달/포장</a></li>
+                                <li class="sub-item"><a href="">커머스</a></li>
+                                <li class="sub-item"><a href="">사장님/라이더</a></li>
+                                <li class="sub-item"><a href="">컬쳐</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-list"><a href="">함께가치</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">배민그린</a></li>
+                                <li class="sub-item"><a href="">배민아카데미</a></li>
+                                <li class="sub-item"><a href="">파트너 성장</a></li>
+                                <li class="sub-item"><a href="">이웃과 함께</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-list"><a href="">뉴스룸</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">보도자료</a></li>
+                                <li class="sub-item"><a href="">언론보도</a></li>
+                                <li class="sub-item"><a href="">팩트 바로 알기</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-list"><a href="">글꼴</a></li>
+                </ul>
+
+                <div class="family-wrap">
+                    <a href="">배민다움</a>
+                    <a href="">인재영입</a>
+                </div>
+
+                <ul class="lang-wrap">
+                    <button class="kr">한</button>
+                    <button class="en">A</button>
+                </ul>
+
+            </nav>
+
+            <a href="" class="btn-menu">
+                 메뉴
+            </a>
+
+            <nav class="nav-area2">
+                 모바일네비
+            </nav>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <section class="sc-visual">
+            <h2 class="blind">우아한 형제들이 알고싶다</h2>
+
+            <div class="visual-slide swiper">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="https://woowahan-cdn.woowahan.com/new_resources/image/banner/09bf3877b83547cdb54eccadcc775907.jpg"alt="">
+                            
+                            <div class="txt-wrap">
+                                <h3 class="title">우아한형제들이 알고 싶다</h3>
+                                <strong>세종대왕님~<br>감사합니다</strong>
+                                <a href=""><p>글꼴 ></p></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="https://woowahan-cdn.woowahan.com/new_resources/image/banner/09bf3877b83547cdb54eccadcc775907.jpg"alt="">
+                            
+                            <div class="txt-wrap">
+                                <h3 class="title">우아한형제들이 알고 싶다</h3>
+                                <strong>지금까지<br>배민 뉴스였습니다!</strong>
+                                <a href=""><p>뉴스룸 ></p></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="https://woowahan-cdn.woowahan.com/new_resources/image/banner/09bf3877b83547cdb54eccadcc775907.jpg"alt="">
+                            
+                            <div class="txt-wrap">
+                                <h3 class="title">우아한형제들이 알고 싶다</h3>
+                                <strong>배달의민족에게<br>행복이란?</strong>
+                                <a href=""><p>회사소개 ></p></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="https://woowahan-cdn.woowahan.com/new_resources/image/banner/09bf3877b83547cdb54eccadcc775907.jpg"alt="">
+                            
+                            <div class="txt-wrap">
+                                <h3 class="title">우아한형제들이 알고 싶다</h3>
+                                <strong>푸드테크 회사에서<br>글꼴을 만들어요?</strong>
+                                <a href=""><p>글꼴 ></p></a>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="">
+                            <img src="https://woowahan-cdn.woowahan.com/new_resources/image/banner/09bf3877b83547cdb54eccadcc775907.jpg"alt="">
+                            
+                            <div class="txt-wrap">
+                                <h3 class="title">우아한형제들이 알고 싶다</h3>
+                                <strong>배달의민족에서<br>이런 일도 하나요?</strong>
+                                <a href=""><p>서비스 ></p></a>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                    <!-- option -->
+                    <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
+
+        <section class="sc-card">
+            <div class="title-area">
+                <h2 class="title fade-up">우아한형제들이 일하는 이야기</h2>
+                <p class="title-small">평범한 사람들이 모여 비범한 성과를 내도록</p>
+            </div>
+
+            <div class="card-slide">
+
+                <div class="card-wrap">
+                    <ul class="card-list">
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/4bc086f449c34b6b8112e9f618692607.png" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="card-list">
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/4bc086f449c34b6b8112e9f618692607.png" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                        <li class="card-item">
+                            <a href="" class="link-card">
+                                <span class="img-wrap">
+                                    <img src="https://woowahan-cdn.woowahan.com/new_resources/image/card/ef59d2b5ebf6407d9250bb647afece47.jpeg" alt="">
+                                </span>
+                                <span class="desc">채식도<br>개발이 되나요?</span>
+                            </a>
+                        </li>
+                    </ul>
+                    
+                </div>
+               
+            </div>
+        </section>
+
+        <section class="sc-service">
+            <h2 class="blind">비전</h2>
+            <div class="title-area">
+                <h3 class="title">‘문 앞으로 배달되는 일상의 행복’이라는<br>비전으로</h3>
+                <p class="title-small">우아한형제들은 배달이 일상을 조금 더 행복하게 하도록 오늘도 달리고 있어요</p>
+            </div>
+
+            <div class="video-area">
+                <video autoplay="" class="video" loop="" muted="" poster="">
+                    <source src="https://woowahan-cdn.woowahan.com/static/media/main_service.878a686a.mp4" type="video/mp4">
+                </video>
+                <button class="btn pause">일시정지</button>
+                <button class="btn play">재생</button>
+                
+            </div>
+
+            <div class="title-area">
+                <h3 class="title">오늘이 전설이 될 수 있도록</h3>
+                <p class="title-small">세계 진출, 배민로봇 개발, 인공지능을 연구하며<br>우아한형제들은 미래를 더 가깝게 만들고 있어요.</p>
+            </div>
+        </section>
+
+        <section class="sc-season">
+            <h2 class="blind">환경친화에 힘쓰는 배달의민족</h2>
+                <a href="">
+                    <!-- <div class="img-area"></div> -->
+                    <div class="title-area">
+                        <strong class="title">잘 먹겠습니다<br>잘 버리겟습니다</strong>
+                        <img src="./img/season_1_character_docgo.png" alt="">
+                        <p class="title-small">지구에게 건네는 작지만 큰 인사<br>배달의민족과 함께 지구에게 인사를 건네 볼까요?</p>
+                    </div>
+                </a>
+        </section>
+
+
+        <section class="sc-news">
+            <div class="title-area">
+                <h2 class="title">빠르고 정확한<br>우아한형제들의 새 소식</h2>
+            </div>
+
+            <div class="news-area">
+                <ul class="news-wrap">
+                    <li class="news-list">
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="https://woowahan-cdn.woowahan.com/new_resources/image/report/fdf035a397f644239c00750d505c985d.JPG" alt="">
+                            </div>
+                            <div class="txt-wrap">
+                                <p class="list-title">배민 봉사활동에 라이더들 동참, 함께 흘린 '귀한 땀'</p>
+                                <span class="date">2022.05.18</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-list">
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="https://woowahan-cdn.woowahan.com/new_resources/image/report/fdf035a397f644239c00750d505c985d.JPG" alt="">
+                            </div>
+                            <div class="txt-wrap">
+                                <p class="list-title">배민 봉사활동에 라이더들 동참, 함께 흘린 '귀한 땀'</p>
+                                <span class="date">2022.05.18</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="news-list">
+                        <a href="">
+                            <div class="img-wrap">
+                                <img src="https://woowahan-cdn.woowahan.com/new_resources/image/report/fdf035a397f644239c00750d505c985d.JPG" alt="">
+                            </div>
+                            <div class="txt-wrap">
+                                <p class="list-title">배민 봉사활동에 라이더들 동참, 함께 흘린 '귀한 땀'</p>
+                                <span class="date">2022.05.18</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="link-box">
+                <a href="" class="link-more">더 보기</a>
+            </div>
+        </section>
+
+        <section class="sc-font">
+            <div class="title-area">
+                <h2 class="title">배달의민족 글꼴 찾으세요?</h2>
+                <p class="title-small">배달의민족이 만든 모든 글꼴은 무료입니다.<br>마음껏 쓰고, 널리 퍼뜨리는 것도 무료!</p>
+            </div>
+
+            <div class="font-area">
+                <ul class="font-wrap">
+
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    <li class="font-list">
+                        <div class="list-wrap">
+                            <p class="font-name">도현체</p>
+                            <span class="font">
+                                <svg width="42" height="45" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M0 5.709h11.546C10.654 11.194 6.024 16.51.781 19.086v3.526c6.136-2.239 11.212-7.556 12.55-11.418.837 1.847 2.064 3.582 3.347 5.093 2.064 2.519 5.522 5.318 8.144 6.045v-3.638c-1.952-1.063-3.18-2.07-4.686-3.582-2.398-2.407-4.852-5.82-5.745-9.403H24.99V2.295H0v3.414zM4.685 45H35.7v-2.63H8.534v-4.982h26.719v-9.85H4.685v2.182h26.273v5.205H4.685V45zm26.217-21.1h3.849v-9.684H41.5V10.69h-6.75V0h-3.848v23.9z" fill="#F3F4F5"></path>
+                                </svg>
+                            </span>
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>
+            <div class="link-box">
+                <a href="" class="link-more">더 보기</a>
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="inner">
+            <div class="corp-area">
+
+                <ul class="corp-wrap">
+                    <li class="corp-list"><a href="">회사소개</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">우아한 문화</a></li>
+                                <li class="sub-item"><a href="">히스토리</a></li>
+                                <li class="sub-item"><a href="">윤리경영</a></li>
+                                <li class="sub-item"><a href="">준법경영</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="corp-list"><a href="">서비스</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">배달/포장</a></li>
+                                <li class="sub-item"><a href="">커머스</a></li>
+                                <li class="sub-item"><a href="">사장님/라이더</a></li>
+                                <li class="sub-item"><a href="">컬쳐</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="corp-list"><a href="">함께가치</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">배민그린</a></li>
+                                <li class="sub-item"><a href="">배민아카데미</a></li>
+                                <li class="sub-item"><a href="">파트너 성장</a></li>
+                                <li class="sub-item"><a href="">이웃과 함께</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="corp-list"><a href="">뉴스룸</a>
+                        <div class="sub-wrap">
+                            <ul class="sub-list">
+                                <li class="sub-item"><a href="">보도자료</a></li>
+                                <li class="sub-item"><a href="">언론보도</a></li>
+                                <li class="sub-item"><a href="">팩트 바로 알기</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="corp-list"><a href="">글꼴</a></li>
+
+                    <li class="other-list">
+                        <div class="sub-item">
+                            <a href="">오시는 길</a>
+                            <a href="">공지사항</a>
+                            <a href="">개인정보처리방침</a>
+                            <a href="">제휴문의</a>
+                            <a href="">소비자중심경영</a>
+                        </div>
+                    </li>
+                </ul>
+
+               
+
+            </div>
+
+            <div class="family-site">
+                <div class="site-list">
+                    <div class="site-item">
+                        <a href="" class="btn-title">
+                            <span class="txt">관련 사이트</span>
+                            <!-- <div class="down-btn">
+                                <svg width="12" height="8" fill="none" xmlns="http://www.w3.org/2000/svg" class>
+                                    <path d="M2 2l4 4 4-4" stroke="#232324" stroke-width="1.5" stroke-linecap="square"></path>
+                                </svg>
+                            </div> -->
+                        </a>
+                        <ul class="sub-list">
+                            <li><a href="">우유안부</a></li>
+                            <li><a href="">우아한 크리에이티브</a></li>
+                            <li><a href="">기술 블로그</a></li>
+                            <li><a href="">주간 베짱이</a></li>
+                            <li><a href="">우아한 청년들</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="address">
+                <h2>(주)우아한형제들</h2>
+                사업자 등록번호 : 120-87-65763<i></i>대표 : 김봉진, 김범준<i></i> 주소 : 서울시 송파구 위례성대로 2 (방이동, 장은빌딩)
+            </div>
+
+        </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script><!-- 모션라이브러리 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/main.js"></script>
+
+</body>
+
+</html>
