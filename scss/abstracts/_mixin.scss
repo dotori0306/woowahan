@@ -19,3 +19,20 @@ $pc:1280px;
       @content;
     }
   }
+
+
+
+@mixin overflowHidden{
+  &.hidden{
+    overflow: hidden;
+  }
+}
+
+@mixin noScroll{
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+
+  &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+  }
+}

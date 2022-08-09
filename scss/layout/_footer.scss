@@ -11,32 +11,30 @@ footer{
     background-color: #f3f4f5;
     overflow: hidden;
 
-    @include mobile{
-        padding: 30px 0 40px;
-    }
-
     .inner{
         position: relative;
     }
 
     .corp-wrap{
         display: flex;
-        justify-content: start;
         align-items: baseline;
+        white-space: nowrap;
+
+        &>li{flex: 1;}
     }
 
     @include mobile{
         .corp-wrap{
+            flex: 1;
             flex-wrap: wrap;
-        }
-        .corp-list{
-            flex: 0 0 50%;
+
+            .corp-list{margin-bottom: 20px;}
         }
     }
 
     .corp-list>a{font-weight: bold;}
 
-    .sub-list{
+    .c-sub-list{
         margin-top: 8px;
         padding-right: 8px;
         line-height: 1.4;
@@ -44,7 +42,13 @@ footer{
         font-size: 14px;
         line-height: 1.7142857143;
     }
-   
+
+    .c-sub-item{
+        margin-top: 8px;
+        padding-right: 8px;
+        line-height: 1.4;
+        
+    }   
     
     .other-list{
         margin-top: 8px;
@@ -77,7 +81,7 @@ footer{
 
 
 
-        h3{
+        .ad-title{
             font-weight: bold;
             line-height: 1.75;
             margin-bottom: 8px;
@@ -101,7 +105,18 @@ footer{
         right: 7px;
         width: 327px;
 
-        @include mobile{position: relative;width: 100%;}
+        @include mobile{
+            position: relative;
+            width: 100%;
+            right: auto;
+            bottom: auto;
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            .sub-item{
+                &:nth-child(n+3){display: none;}
+            }
+        }
 
         .btn-title{
             font-size: 14px;
@@ -118,14 +133,28 @@ footer{
             background: #fff;
         }
 
-        .down-btn{
+        .txt{
+            &::after{
+                content: '';
+                display: inline-block;
+                border-top: 2px solid #38383a;
+                border-right: 2px solid #38383a;
+                width: 5px;height: 5px;
+                transform: rotate(135deg);
+                position: absolute;
+                right: 30px;top: 22px;
+                transition: transform 0.5s;
+            }
+
             &.on{
-                transform: rotate(180deg);
+                &::after{transform: rotate(315deg);}
             }
         }
+
+
     
         .sub-list{
-            // display: none;
+            display: none;
             font-size: 14px;
             position: absolute;
             bottom: 100%;
@@ -139,7 +168,6 @@ footer{
             overflow: auto;
             display: none;
             max-height: 215px;
-            
 
             &::-webkit-scrollbar{width: 5px;height: 5px;}
             &::-webkit-scrollbar-thumb {

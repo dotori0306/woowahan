@@ -20,9 +20,9 @@ i {font-style:normal}
 body{
     letter-spacing: -0.025em;
     min-width: 280px;
-    // margin: 0 auto;
-    // width: 100%;
-    // color: #fff;
+    line-height: 1.25;
     font-family: $font-kr;
     color: #232324;
+
+    @include overflowHidden;
 }

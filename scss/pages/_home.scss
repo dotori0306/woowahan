@@ -11,6 +11,11 @@
 
     .sc-visual &{font-size: 25px;}
     .sc-season &{margin: 20px 0;}
+
+    @include mobile{
+        font-size: 30px;
+        line-height: 1.4;
+    }
     
 }
 
@@ -27,16 +32,11 @@
 
 .sc-visual{
     
-    .visual-slide.swiper{
-        // height: calc(100vh - 72px);
-        height: 100vh;
-
-        
-        // a{display: block;height: 100%;}
-    }
+    .visual-slide.swiper{height: 100vh;}
 
     .swiper-slide{
         overflow: hidden;
+
         img{
             width: 120%;
             height: 100%;
@@ -78,6 +78,15 @@
             }
         }
     }
+
+    @include mobile{
+        
+        .txt-wrap{
+            .title{font-size: 20px;font-weight: 500;}
+            strong{font-size: 50px;}
+        }
+    }
+
 }
 
 
@@ -85,7 +94,11 @@
 .sc-card{
     padding-top: 160px;
 
-    .title-area{margin-bottom: 60px;}
+    .title-area{
+        margin-bottom: 60px;
+
+        .m{display: none;}
+    }
     
     .card-slide{width: 100%;overflow: hidden;padding-top: 100px;}
     .card-wrap{display: flex;width: 3840px;}
@@ -140,6 +153,12 @@
         }
     }
 
+    @include mobile{
+        .title-area{
+            .m{display: block;}
+        }
+    }
+
 
 }
 
@@ -151,6 +170,8 @@
 
     .title-area{
         margin-bottom: 80px;
+
+        .m{display: none;}
     }
 
     .video-area{
@@ -161,13 +182,12 @@
 
         video{width: 100%;object-fit: cover;}
 
-        .btn{
-            width: 50px;height: 50px;
+        .btn{width: 80px;height: 80px;
             position: absolute;
             top: 50%;left: 50%;
             transform: translate(-50%, -50%);
-            background: #f00;
             display: none;
+            cursor: pointer;
         }
         &.play{
             &:hover{
@@ -182,6 +202,16 @@
         }
     }
 
+    @include mobile{
+
+        .title-area{
+            .pc{display: none;}
+            .m{display: block;}
+        }
+
+        .video-area{width: 100%;}
+    }
+
 }
 
 
@@ -190,30 +220,25 @@
     height: 680px;
     background: url(../img/season_1_bg.jpg) no-repeat center/cover fixed;
     
-    // .img-area{
-        
-    //     position: absolute;
-    //     top: 0;
-    //     right: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     min-height: 100%;
-    //     background-attachment: fixed;
-    // }
-
     .title-area{
         position: absolute;
         top: 50%;left: 50%;
         transform: translate(-50%, -50%);
         color: #fff;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .s-logo{
+            width: 120px;height: 40px;
+        }
     }
 }
 
 
 .sc-news{
     padding: 120px 0;
-    
+
     .news-wrap{
         max-width: 820px;
         margin: 0 auto;
@@ -222,9 +247,24 @@
     .news-list{
         border-bottom: 1px solid #f3f4f5;
         
-        a{
-            display: flex;
-            padding: 40px 20px;
+        a{display: flex;padding: 40px 20px;}
+
+        .img-wrap{
+            overflow: hidden;
+
+
+            img{
+                width: 100%;height: 100%;object-fit: cover;
+                transform: scale(1);
+                transition: transform 0.3s ease-in-out;
+            }
+        }
+       
+
+        &:hover{
+            background-color: rgba(243,244,245,.5);
+
+            img{transform: scale(1.1);}
         }
     }
 
@@ -265,28 +305,66 @@
         font-size: 16px;
         font-weight: 600;
     }
+
+    @include mobile{
+        margin: 0 24px;
+
+        .news-list{
+
+            a{padding: 30px 0;}
+            
+            .img-wrap{
+                width: 100px;height: 80px;
+                margin-right: 16px;
+            }
+
+            .txt-wrap{
+
+                .list-title{
+                max-height: 52px;
+                margin-bottom: 5px;
+                font-size: 16px;
+                line-height: 1.625;
+                }
+
+                .date{font-size: 12px;line-height: 1.7;}
+            }
+        }
+    }
 }
 
 .sc-font{
     padding: 120px 0 136px;
     background-color: #232324;
     color: #fff;
-    overflow: hidden;
 
-    .title-area{margin-bottom: 60px;}
+    .title-area{
+        margin-bottom: 60px;
+    }
+
+    .font-slide{
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .font-area{
+        display: flex;
+        width: 3840px;
+    }
 
     .font-wrap{
         display: flex;
-        overflow: hidden;
+        width: 1920px;
+
+        &+.font-wrap{margin-left: 3px;}
     }
-    
 
     .font-list{padding: 0 8px;}
 
     .list-wrap{
         position: relative;
         display: block;
-        width: 160px;
+        width: 159px;
         height: 128px;
         border-radius: 8px;
         background: #37373a;
